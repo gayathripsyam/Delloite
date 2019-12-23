@@ -1,0 +1,29 @@
+java.util.*;
+
+Public class test{
+
+public static void main(String[] args) {
+
+Scannner sc = new Scanner(System.in);
+String s = sc.nextLine();
+String rev = new String[a]
+System.out.println(" " + s.reverse);
+for (int i=0; i<= rev.length; i++){
+rev[i]= s[rev.length-1]
+}
+
+int count = 0
+rev n;
+for (int i=0; i<= rev.length; i++)
+{
+n = s.charAt(i);
+if (ch[i]= 'a' || ch[i] = 'e' || ch[i]= 'i' || ch[i] = 'o' || ch[i] = 'u' || ch[i]= 'A' || ch[i] = 'E' || ch[i]= 'I' || ch[i] = 'O' || ch[i] = 'U'){
+count++
+}
+System.out.println(rev);
+System.out.println(rev);
+}
+}
+
+	
+
