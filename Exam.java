@@ -38,18 +38,18 @@ public class Exam {
     System.out.println(replaceString);
 
     
-    //StringTokenizer tokenizer = new StringTokenizer(s);
-	  // while(tokenizer.hasMoreTokens())
-	  // {
-		//   System.out.println(tokenizer.nextElement());
-	 //  }
+  
 
 
 //names alone
-	String [] s5 = s.split(" ", 4);
+	String [] s5 = s.split(" j");
+	s5[1] = "j" + s5[1];
+	for(String s6 : s5) {
+		System.out.println(s6);
+	}
 
-	for (String k : s5)
-    System.out.println(k);
+	//for (String k : s5)
+    //System.out.println(k);
     
     System.out.println(s.toLowerCase() );
     
