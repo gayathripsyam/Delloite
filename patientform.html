@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Patient Signup</title>
+</head>
+<body>
+	<form>
+	<h2>Patient Details</h2>
+	<table cellspacing = "10" cellpadding="10" align="centre">
+	<tr>
+	<td>Patient ID:</td>
+	<td> <input type="text" name ="patientId" id ="patientId"></td><br/>
+		</tr>
+		<tr>
+	<td>Patient Name:</td>
+	<td><input type="text" name ="patientname" id ="patientname"></td>
+	</tr>
+		<tr>
+	<td>Patient Address:</td>
+	<td><textarea name ="patientaddress" id ="patientaddress"
+	rows = "5" cols=10"> </textarea></td>
+	</tr>
+    <tr>
+	<td>Blood type:</td>
+	<td><input type="Radio" name ="blood" value=O+ve id ="O+ve"> O+ve
+	<input type="Radio" name ="blood" value=O-ve id ="O-ve"> O-ve
+    <input type="Radio" name ="blood" value=A+ve id ="A+ve"> A+ve</td>	
+	</tr>
+	<tr>
+	<td>Consults:</td>
+	<td><input type="checkbox" name ="doctorA" value=doctorA id ="doctorA"> Doctor A
+	<input type="checkbox" name ="doctorB" value=doctorB id ="doctorB"> Doctor B</td>	
+	</tr>
+	<tr>
+	<td>Department:</td>
+	<td>
+	<select name = "department" value=Department id="department">
+	<option value =  "choose">Choose any</option>
+	<option value =  "Neuro">Neuro</option>
+	<option value =  "Oncology">Oncology</option>
+	<option value =  "Cardio">Cardiology</option>
+	</select>
+	</tr>
+	
+	<input type="Radio" name ="blood" value=O+ve id ="O+ve"> O+ve
+	<input type="Radio" name ="blood" value=O-ve id ="O-ve"> O-ve
+    <input type="Radio" name ="blood" value=A+ve id ="A+ve"> A+ve</td>	
+	</tr>
+	
+	<tr>
+	<td><input type = "submit" value = "Go"></td>
+	<td><input type = "reset" value = "Clear"></td>
+	</tr>
+	</form>
+	</table>
+</body>
+</html>
