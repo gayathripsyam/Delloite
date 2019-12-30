@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var bill = prompt("Enter your bill amount: ", 'Bill amount'); 
+alert("Your bill amount entered is: " +bill)
+
+var today = new Date();
+var lastdate = new Date();
+var thisdate = today.getDate();
+lastdate.setDate(15);
+if(lastdate < thisdate){
+	var day = 1000*60*60*24;
+	x = (lastdate-today)/day;
+	billnew = parseInt(bill) + parseInt(x*50);
+	alert("Bill to be paid: " +billnew)
+}
+else
+	{
+	alert("Bill to be paid: " +bill)
+	}
+
+
+</script>
+</body>
+</html>
