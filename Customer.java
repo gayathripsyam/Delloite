@@ -1,14 +1,31 @@
-package Oops;
 
-public class Customer {
-
-
-	public int customerId;
-	public String customerName;
-	public String customerAddress;
-	public int billAmount;
+public class Customer implements Comparable<Customer>{
 	
+	private int customerId;
+	private String customerName;
+	private String customerAddress;
+	private int billAmount;
 	
+	@Override
+	public int compareTo(Customer o) {
+		if(this.getBillAmount() > o.getBillAmount())
+		return 0;
+		else
+			return -1;
+	}
+	
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Customer(int customerId, String customerName, String customerAddress, int billAmount) {
+		super();
+		this.customerId = customerId;
+		this.customerName = customerName;
+		this.customerAddress = customerAddress;
+		this.billAmount = billAmount;
+	}
+
 	public int getCustomerId() {
 		return customerId;
 	}
@@ -41,28 +58,11 @@ public class Customer {
 		this.billAmount = billAmount;
 	}
 
-	public Customer() {   //default constructor
-		customerId = 1000;
-		customerName = "NA";
-		customerAddress = "NA";
-		billAmount = 500;
-		System.out.println("Customer cons are called");
+	@Override
+	public String toString() {
+		return "\n Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
+				+ customerAddress + ", billAmount=" + billAmount + "]";
 	}
-	
-	public Customer(int id, String name, String address, int billAmount) { //parametric constructor
-		
-		this.customerId = id;
-		this.customerName = name;
-		this.customerAddress = address;
-		this.billAmount = billAmount;
-		System.out.println("Parametrised cons are called");
-	}
-	
-	public void printCustomer() {
-		System.out.println("ID: "+ this.customerId);
-		System.out.println("Name: " +this.customerName);
-		System.out.println("Address: " +this.customerAddress);
-		System.out.println("Bill: " +this.billAmount);
-	}
+
 	
 }
