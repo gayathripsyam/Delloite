@@ -1,10 +1,12 @@
+import java.io.Serializable;
+import java.util.Scanner;
 
-public class Customer implements Comparable<Customer>{
+public class Customer implements Serializable,Comparable<Customer>{
 	
 	private int customerId;
 	private String customerName;
 	private String customerAddress;
-	private int billAmount;
+	private transient int billAmount;
 	
 	@Override
 	public int compareTo(Customer o) {
@@ -58,6 +60,24 @@ public class Customer implements Comparable<Customer>{
 		this.billAmount = billAmount;
 	}
 
+	
+	
+	public void accept() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter customer id : "); customerId = scanner.nextInt();
+        System.out.println("Enter customer name : "); customerName = scanner.next();
+        System.out.println("Enter customer address : "); customerAddress = scanner.next();
+        System.out.println("Enter bill amount : "); billAmount = scanner.nextInt();
+    }
+	
+	public void updateCustomer() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter customer id to update : "); customerId = scanner.nextInt();
+        System.out.println("Enter new customer name : "); customerName = scanner.next();
+        System.out.println("Enter new customer address : "); customerAddress = scanner.next();
+        System.out.println("Enter new bill amount : "); billAmount = scanner.nextInt();
+    }
+	
 	@Override
 	public String toString() {
 		return "\n Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
